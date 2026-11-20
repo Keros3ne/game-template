@@ -1,6 +1,6 @@
 {
 	"name": "game-template",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A studio's repository to start from: Studio Name, with one small slot, Game Title, built on the Keros3ne SDK.",
 	"license": "MIT",
 	"private": true,
@@ -19,7 +19,7 @@
 		"lint": "prettier --check ."
 	},
 	"dependencies": {
-		"@keros3ne/sdk": "github:Keros3ne/sdk#v0.21.1",
+		"@keros3ne/sdk": "github:Keros3ne/sdk#v0.21.2",
 		"pixi.js": "^8.23.0",
 		"svelte": "^5.57.2",
 		"valibot": "^1.5.0"

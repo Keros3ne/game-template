@@ -2,7 +2,10 @@
 # game's books made and checked, its client built again and held to its record, and the
 # tests.
 name: Check
-on: [push, pull_request]
+# Not on main: work is done on a branch, and merged only once this has passed there.
+on:
+    push:
+        branches-ignore: [main]
 jobs:
     check:
         runs-on: ubuntu-latest
