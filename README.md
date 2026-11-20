@@ -86,8 +86,9 @@ bun run typecheck
    `bun run test:browser`.
 2. Set `sdk` in `studio.json` to the version of the SDK you built on.
 3. Commit, tag the release (`git tag v0.1.0`) and push the tag.
-4. Pack the books and the built client and send them as the release's files:
-   `bun run pack`, then `gh release create v0.1.0 release/*`.
+4. Pack the game and send it as the release's file: `bun run pack`, then
+   `gh release create v0.1.0 release/game-title.tar.gz`. That one file is the client as
+   you built it and the books your maths made, in a `client` folder and a `maths` folder.
 5. Send Keros3ne the repository and the tag.
 
 The site takes in your manifest, readme, licence, games and any folders you list as
