@@ -1,5 +1,5 @@
 {
-	"sdk": "0.21.0",
+	"sdk": "0.21.1",
 	"protocol": "keros3ne-game/3",
 	"files": {
 		"_app/immutable/assets/2.B1t5QRC5.css": "4225b04ee7d09f8539d3401dd5da05d75717b95ba2d3f6ce81ee1c85be05bc01",
@@ -45,17 +45,17 @@
 		"_app/immutable/chunks/rq3AEvlt.js": "b1fc229d50beca6edcdfe4fd56eb86fa297a8e3bf977d0d6a571bc18e8c978b9",
 		"_app/immutable/chunks/wv21gqtn.js": "0784ce8b87fbb8fb90d1c9209cfbfd6ee0706726a35ace75ca5893f1d4a1d41f",
 		"_app/immutable/chunks/xeBjodxp.js": "85823c1d751218a71a72dd27e2859c39da6e5320a332268fdfe4c74c57279141",
-		"_app/immutable/entry/app.D6UEGPBG.js": "63e07d85443d38129999db67f17c016852dadd9e394d98460de337c4d87778e6",
+		"_app/immutable/entry/app.DW4CW0fw.js": "1231a35806c240f47a69e4090409abb941e36d48d6c6ba64a0dc52d19fe52b76",
 		"_app/immutable/entry/payload.DSmR2FwN.js": "b7cba7b44b2397c7d28f7db4a34ec734a985e64ff27d74ddf8d9645cf814f09f",
 		"_app/immutable/entry/start.B9SGR-Bd.js": "39c5dc4fdf1e73d58450fffec87c00e6083c3f37a4eed7b1c101fb7bc54b5596",
 		"_app/immutable/loading-first.WHGMen48.js": "58718c7a7e3c98adeab4db1fe7385b5f42fad55f53b3a7a87bc089641b4a0827",
 		"_app/immutable/nodes/0.Bw0VlOX9.js": "b14dc62a429dc1ad8bd7f618feef5675d3b87fa8088951898c757249589aea3e",
 		"_app/immutable/nodes/1.D3k1Z7a4.js": "d4cfd52d0dba04fd6386a1938dca3b0511eff0b506749edd68293ace8419b6d3",
-		"_app/immutable/nodes/2.DnCH8jqM.js": "c2c5ea18378c320b8d13a6ff88354e8ad77797180643575e954c8ff0493a91cc",
-		"_app/immutable/start.GxQxR5A2.js": "1b14314790367d8685f5ed316dc6a051426fd1a966b54aa19d80963531f3729a",
+		"_app/immutable/nodes/2.B7tNbBDI.js": "7c66f4910be509ff2db8a2e21b6708a5ca456e419beedf4cb2666073c648c362",
+		"_app/immutable/start.yv8u7ka-.js": "caff2eee46be2d01ca9f4f84d89872221e9b023dfc6cf3d879e6f53ad26f5c46",
 		"_app/version.json": "86249873b098511d1e1aafaccf2ee07df3b1b0b8a8433b1052e55d636cabd4a0",
 		"card.svg": "45a021f39f214c20f738764278c46b3d77046117f71245f1dc2cfdf3c7b0db92",
-		"index.html": "76cb4b355b11a4bf2808e7e600306d7d84e31107e523bee014ec75eef4ecafa0",
+		"index.html": "ecf3aca47b2a0ee413465168e8088b0bd4a4633fc0f03abce67e7601e6ac84f8",
 		"loading-logo.svg": "3b7ddb8a708f3bffc6b316eed618664c4777f364a9046e829a67816e6bf5dc49"
 	}
 }

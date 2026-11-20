@@ -5,7 +5,7 @@
     "": {
       "name": "game-template",
       "dependencies": {
-        "@keros3ne/sdk": "github:Keros3ne/sdk#v0.21.0",
+        "@keros3ne/sdk": "github:Keros3ne/sdk#v0.21.1",
         "pixi.js": "^8.23.0",
         "svelte": "^5.57.2",
         "valibot": "^1.5.0",
@@ -107,7 +107,7 @@
 
     "@keros3ne/engine": ["@keros3ne/engine@github:Keros3ne/engine#8d1d1fa", { "dependencies": { "@noble/hashes": "^2.4.0", "valibot": "^1.5.0" }, "peerDependencies": { "svelte": "^5.57.2" } }, "Keros3ne-engine-8d1d1fa", "sha512-gpHtW6YUuqyJ78kyRFiLZ1DgC44yp/13CMv3kVZRa5svXRu2r1UFS2AP5qsmiXsQ0q4FAYhnMQwx048bMEa0oQ=="],
 
-    "@keros3ne/sdk": ["@keros3ne/sdk@github:Keros3ne/sdk#3b4287a", { "dependencies": { "@fontsource-variable/geist": "^5.3.0", "@fontsource-variable/geist-mono": "^5.3.0", "@keros3ne/engine": "github:Keros3ne/engine#v0.8.0", "@noble/hashes": "^2.4.0", "@storybook/svelte-vite": "^10.6.7", "@sveltejs/adapter-static": "4.0.1", "@sveltejs/kit": "3.4.0", "@sveltejs/vite-plugin-svelte": "^7.2.0", "pixi.js": "^8.23.0", "storybook": "^10.6.7" }, "peerDependencies": { "svelte": "^5.57.2", "valibot": "^1.5.0", "vite": "^8.0.0" }, "bin": { "keros3ne-studio": "./sdk/cli.ts" } }, "Keros3ne-sdk-3b4287a", "sha512-FyMF34NND5gpdkFHuvphc4y1P7DcHbHybuE9C/KFrV1vAZEx9eCJFCjCOOhulmXCIHGDwcTUowAPrA2RZX5V4A=="],
+    "@keros3ne/sdk": ["@keros3ne/sdk@github:Keros3ne/sdk#a5eff4a", { "dependencies": { "@fontsource-variable/geist": "^5.3.0", "@fontsource-variable/geist-mono": "^5.3.0", "@keros3ne/engine": "github:Keros3ne/engine#v0.8.0", "@noble/hashes": "^2.4.0", "@storybook/svelte-vite": "^10.6.7", "@sveltejs/adapter-static": "4.0.1", "@sveltejs/kit": "3.4.0", "@sveltejs/vite-plugin-svelte": "^7.2.0", "pixi.js": "^8.23.0", "storybook": "^10.6.7" }, "peerDependencies": { "svelte": "^5.57.2", "valibot": "^1.5.0", "vite": "^8.0.0" }, "bin": { "keros3ne-studio": "./sdk/cli.ts" } }, "Keros3ne-sdk-a5eff4a", "sha512-EXQlrtalCEHT8cYOSHQg0uNl39l4tc2GDwmES1FLCEfaDZNuwi34NpxH/HYgAW/QyJw4JL5nYWE2Pg36Jvv/Tw=="],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@1.2.6", "", { "dependencies": { "@tybys/wasm-util": "^0.10.3" }, "peerDependencies": { "@emnapi/core": "^1.7.1 || 2.0.0-beta.2", "@emnapi/runtime": "^1.7.1 || 2.0.0-beta.2" } }, "sha512-mRyDmEw9/fCDXCGfL1sbgIw/GUK0PVxRW4YwgPN61F3LQ+fSyoBFarJVzgGyhF6kRzEQZ0FejDqm4WLXSeqQmw=="],
 
