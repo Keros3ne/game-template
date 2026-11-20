@@ -1,0 +1,87 @@
+# Releases each game whose version has no release yet.
+#
+# A game is released by itself: its game.json says its version, and a release of it is
+# the tag <slug>-v<version> with one file, <slug>.tar.gz. Raise a game's version, push to
+# main, and this makes that release. Games whose versions already have their tags are
+# left alone, however many the repository holds.
+#
+# This file is yours. Add your own tests, use another runner, a cache, an approval before
+# the release, or release on a tag you push yourself. What a site goes by must stay:
+#
+#   - the release's tag is <slug>-v<version>, the version being the one game.json says at
+#     the commit tagged;
+#   - its file is <slug>.tar.gz, as `keros3ne-studio pack` wrote it, unchanged;
+#   - it is a published release, not a draft;
+#   - once a release has been taken in, its tag is never moved and its file never
+#     replaced: a changed game is a raised version and a new release.
+#
+# Nothing of the SDK reaches GitHub: `keros3ne-studio` reads and writes this checkout's
+# files and no more. The one step here that does is the last, `gh release create`, with
+# the token GitHub gives this run.
+name: Release
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+# One at a time, so two pushes never make the same release twice.
+concurrency:
+    group: release
+    cancel-in-progress: false
+
+jobs:
+    # Which games are due: each whose version has no tag.
+    due:
+        runs-on: ubuntu-latest
+        outputs:
+            games: ${{ steps.due.outputs.games }}
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  # Every tag, to tell which versions are released already.
+                  fetch-depth: 0
+            - uses: oven-sh/setup-bun@v2
+            - run: bun install --frozen-lockfile
+            - id: due
+              run: echo "games=$(bun x keros3ne-studio unreleased --json)" >> "$GITHUB_OUTPUT"
+
+    # One job for each game that is due, so one game's failure holds back no other.
+    release:
+        needs: due
+        if: needs.due.outputs.games != '[]'
+        runs-on: ubuntu-latest
+        permissions:
+            # To create the release and its tag. Nothing else is asked for.
+            contents: write
+        strategy:
+            fail-fast: false
+            matrix:
+                game: ${{ fromJSON(needs.due.outputs.games) }}
+        env:
+            SLUG: ${{ matrix.game.slug }}
+            VERSION: ${{ matrix.game.version }}
+            TAG: ${{ matrix.game.tag }}
+        steps:
+            - uses: actions/checkout@v4
+            - uses: oven-sh/setup-bun@v2
+            - run: bun install --frozen-lockfile
+
+            # Yours to change: whatever you hold your own work to.
+            - run: bun run lint
+            - run: bun run typecheck
+            - run: bun run test
+
+            # The release itself. The game's books are made from its maths, its client is
+            # built again, and both are held to the records committed (books/books.json,
+            # client/client.json): what is packed is what this commit says it is.
+            - run: bun x keros3ne-studio books "$SLUG"
+            - run: bun x keros3ne-studio check --build "$SLUG"
+            - run: bun x keros3ne-studio pack "$SLUG"
+            - name: Create the release
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              run: |
+                  gh release create "$TAG" "release/$SLUG.tar.gz" \
+                      --target "$GITHUB_SHA" \
+                      --title "$SLUG $VERSION" \
+                      --notes "$SLUG at $VERSION: one file, $SLUG.tar.gz, with the client as built (client/) and its books (maths/)."
