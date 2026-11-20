@@ -1,0 +1,17 @@
+# Everything the site will hold a release to, run on every push first: the types, the
+# game's books made and checked, its client built again and held to its record, and the
+# tests.
+name: Check
+on: [push, pull_request]
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: oven-sh/setup-bun@v2
+            - run: bun install --frozen-lockfile
+            - run: bun run lint
+            - run: bun run typecheck
+            - run: bun run books
+            - run: bun run check --build
+            - run: bun run test

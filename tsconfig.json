@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"target": "es2022",
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"lib": ["es2023", "dom", "dom.iterable"],
+		"types": ["bun", "node"],
+		"strict": true,
+		"noEmit": true,
+		"allowImportingTsExtensions": true,
+		"verbatimModuleSyntax": true,
+		"skipLibCheck": true,
+		"noUncheckedSideEffectImports": false
+	},
+	"include": [
+		"*/maths/**/*.ts",
+		"*/client/src/**/*.ts",
+		"*/client/src/**/*.svelte",
+		"e2e/**/*.ts",
+		"*.ts"
+	],
+	"exclude": ["**/dist/**", "**/node_modules/**"]
+}

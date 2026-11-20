@@ -1,0 +1,5 @@
+{
+	"name": "Studio Name",
+	"sdk": "^0.20.0",
+	"games": ["game-title"]
+}

@@ -1,0 +1,39 @@
+{
+	"name": "game-template",
+	"version": "1.0.0",
+	"description": "A studio's repository to start from: Studio Name, with one small slot, Game Title, built on the Keros3ne SDK.",
+	"license": "MIT",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"books": "keros3ne-studio books",
+		"client": "keros3ne-studio client",
+		"check": "keros3ne-studio check",
+		"dev": "keros3ne-studio dev game-title",
+		"stories": "keros3ne-studio stories",
+		"pack": "keros3ne-studio pack",
+		"test": "bun node_modules/vitest/vitest.mjs --run",
+		"test:browser": "bun node_modules/@playwright/test/cli.js install chromium && bun node_modules/@playwright/test/cli.js test",
+		"typecheck": "svelte-check --tsconfig ./tsconfig.json",
+		"format": "prettier --write .",
+		"lint": "prettier --check ."
+	},
+	"dependencies": {
+		"@keros3ne/sdk": "github:Keros3ne/sdk#v0.20.6",
+		"pixi.js": "^8.23.0",
+		"svelte": "^5.57.2",
+		"valibot": "^1.5.0"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.60.0",
+		"@storybook/svelte-vite": "^10.6.7",
+		"@types/bun": "^1.4.4",
+		"@types/node": "^22",
+		"prettier": "^3.10.1",
+		"prettier-plugin-svelte": "^4.1.1",
+		"svelte-check": "^4.6.0",
+		"typescript": "^6.0.3",
+		"vite": "^8.3.0",
+		"vitest": "^4.1.8"
+	}
+}
