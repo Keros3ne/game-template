@@ -50,7 +50,6 @@ game-title/
   client/public/card.svg          its picture on the site's game card
   client/client.json              the record of the client as it was built
 e2e/stories.e2e.ts                its stories, played in a browser
-.github/workflows/release.yml     releases each game whose version has no release yet
 ```
 
 ## Building a game
@@ -80,32 +79,24 @@ bun run typecheck
 3. **The guide** is the game's rules and paytable as words and tables, held to the rules'
    own figures by a test.
 
-## Sending a release
+## Sending a game
 
-A game is released by itself. Its `game.json` says its `version`, and a release of it is
-the tag `<slug>-v<version>` (`game-title-v1.1.0`) with one file, `game-title.tar.gz`: the
-client as it was built and the books its maths made, in a `client` folder and a `maths`
-folder. A repository of many games releases one without a word of the others.
+A game is sent as one file, and nothing else of yours goes with it: no site sees this
+repository. `bun run pack` writes everything a site needs of a version of a game into
+`release/<slug>-<version>.tar.gz`: its `game.json`, `guide.json` and card, its client as
+it was built, the books its maths made, and any `assets/`. It is an ordinary archive, so
+you can open it and see exactly what you are sending.
 
-The release is made by this repository's own workflow, `.github/workflows/release.yml`,
-on GitHub Actions. Nothing of the SDK reaches GitHub from your machine.
-
-1. Change the game, and raise `version` in its `game.json`.
+1. Change the game, and raise `version` in its `game.json`: a site publishes a version
+   once, and the next must come after it.
 2. Run `bun run books`, `bun run client`, `bun run check`, `bun run test` and
    `bun run test:browser`. Commit, with `books/books.json` and `client/client.json`.
-3. Push to `main`. The workflow finds each game whose version has no tag yet, makes its
-   books, builds its client again, holds both to the records you committed, packs it and
-   creates the release.
-4. Send Keros3ne the repository and the tag.
+3. Run `bun run pack game-title`, and send Keros3ne the file.
 
-The workflow is yours to change: its own header says what must stay as it is for a site
-to take a release in, and the rest is for your setup.
-
-The site takes in, at the release's tag, your manifest, readme and licence, the game
-released and any folders you list as `shared`, and nothing else; a person reads your
-maths; then it fetches the game's file from the release, holds its books and built
-client to the `books/books.json` and `client/client.json` you committed, checks them and
-lists the game. It never runs your maths, and never builds or runs your client's code.
+Each game is sent by itself, at its own version, however many games a repository holds.
+What you sent is reviewed as it was built: your books by what they come to, your guide,
+and your game, played. A site never runs your maths, and never builds or runs your
+client's code.
 
 Keros3ne takes this repository's own game in under a studio it keeps hidden: its tests
 play Game Title, and players are not shown it.
