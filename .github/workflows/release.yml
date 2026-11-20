@@ -22,6 +22,9 @@ name: Release
 on:
     push:
         branches: [main]
+        # Only a push that changes a game.json, where a version is raised, runs this at all:
+        # any other push uses none of your Actions minutes.
+        paths: ["*/game.json"]
     workflow_dispatch:
 
 # One at a time, so two pushes never make the same release twice.
