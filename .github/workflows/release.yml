@@ -75,7 +75,7 @@ jobs:
             # built again, and both are held to the records committed (books/books.json,
             # client/client.json): what is packed is what this commit says it is.
             - run: bun x keros3ne-studio books "$SLUG"
-            - run: bun x keros3ne-studio check --build "$SLUG"
+            - run: bun x keros3ne-studio check "$SLUG" --build
             - run: bun x keros3ne-studio pack "$SLUG"
             - name: Create the release
               env:
