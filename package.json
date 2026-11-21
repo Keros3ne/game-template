@@ -18,7 +18,7 @@
 		"lint": "prettier --check ."
 	},
 	"dependencies": {
-		"@keros3ne/sdk": "github:Keros3ne/sdk#v0.27.0",
+		"@keros3ne/sdk": "github:Keros3ne/sdk#v0.28.0",
 		"pixi.js": "^8.23.0",
 		"svelte": "^5.57.2",
 		"valibot": "^1.5.0"
