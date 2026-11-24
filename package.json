@@ -11,6 +11,7 @@
 		"dev": "keros3ne-studio dev game-title",
 		"stories": "keros3ne-studio stories",
 		"pack": "keros3ne-studio pack",
+		"make": "keros3ne-studio make",
 		"test": "bun node_modules/vitest/vitest.mjs --run",
 		"test:browser": "bun node_modules/@playwright/test/cli.js install chromium && bun node_modules/@playwright/test/cli.js test",
 		"typecheck": "svelte-check --tsconfig ./tsconfig.json",
@@ -18,7 +19,7 @@
 		"lint": "prettier --check ."
 	},
 	"dependencies": {
-		"@keros3ne/sdk": "github:Keros3ne/sdk#v0.28.0",
+		"@keros3ne/sdk": "github:Keros3ne/sdk#v0.30.0",
 		"pixi.js": "^8.23.0",
 		"svelte": "^5.57.2",
 		"valibot": "^1.5.0"
