@@ -1,17 +1,17 @@
 {
 	"name": "game-template",
-	"description": "A studio's repository to start from: Studio Name, with one small slot, Game Title, built on the Keros3ne SDK.",
+	"description": "A studio's repository to start from: Studio Name, with one small slot, Game Title, built on the Rolarie SDK.",
 	"license": "MIT",
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"books": "keros3ne-studio books",
-		"client": "keros3ne-studio client",
-		"check": "keros3ne-studio check",
-		"dev": "keros3ne-studio dev game-title",
-		"stories": "keros3ne-studio stories",
-		"pack": "keros3ne-studio pack",
-		"make": "keros3ne-studio make",
+		"books": "rolarie-studio books",
+		"client": "rolarie-studio client",
+		"check": "rolarie-studio check",
+		"dev": "rolarie-studio dev game-title",
+		"stories": "rolarie-studio stories",
+		"pack": "rolarie-studio pack",
+		"make": "rolarie-studio make",
 		"test": "bun node_modules/vitest/vitest.mjs --run",
 		"test:browser": "bun node_modules/@playwright/test/cli.js install chromium && bun node_modules/@playwright/test/cli.js test",
 		"typecheck": "svelte-check --tsconfig ./tsconfig.json",
@@ -19,7 +19,7 @@
 		"lint": "prettier --check ."
 	},
 	"dependencies": {
-		"@keros3ne/sdk": "github:Keros3ne/sdk#v0.30.0",
+		"@rolarie/sdk": "github:Rolarie/sdk#v0.31.0",
 		"pixi.js": "^8.23.0",
 		"svelte": "^5.57.2",
 		"valibot": "^1.5.0"

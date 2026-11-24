@@ -21,13 +21,9 @@ test.beforeAll(async () => {
 
 	const port = 6110 + test.info().parallelIndex;
 	origin = `http://localhost:${port}`;
-	storybook = spawn(
-		"bun",
-		["x", "keros3ne-studio", "stories", "--port", String(port)],
-		{
-			stdio: "ignore"
-		}
-	);
+	storybook = spawn("bun", ["x", "rolarie-studio", "stories", "--port", String(port)], {
+		stdio: "ignore"
+	});
 
 	await expect
 		.poll(async () => (await fetch(`${origin}/index.json`).catch(() => null))?.ok, {
