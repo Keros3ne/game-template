@@ -1,6 +1,6 @@
 /**
  * For an editor and `svelte-check` only: a client is built with the SDK's own configuration
- * (`keros3ne-studio client`), and a studio has none. This says what that build says of
+ * (`rolarie-studio client`), and a studio has none. This says what that build says of
  * every component: runes.
  *
  * Author: dwclake

@@ -1,11 +1,11 @@
 # Game template
 
-A studio's repository to start from, for Keros3ne, a social casino played with play money.
+A studio's repository to start from, for Rolarie, a social casino played with play money.
 It holds one studio, Studio Name, with one game, **Game Title**: a three-reel slot kept
 deliberately simple, so that what it shows is everything a studio sends and how, not a
 game's cleverness.
 
-It is built on the studio SDK ([Keros3ne/sdk](https://github.com/Keros3ne/sdk)), a
+It is built on the studio SDK ([Rolarie/sdk](https://github.com/Rolarie/sdk)), a
 dependency at a tag. **The SDK's README is the contract every game is held to**: read it
 beside this.
 
@@ -91,7 +91,7 @@ you can open it and see exactly what you are sending.
    once, and the next must come after it.
 2. Run `bun run books`, `bun run client`, `bun run check`, `bun run test` and
    `bun run test:browser`. Commit, with `books/books.json` and `client/client.json`.
-3. Run `bun run pack game-title`, and send Keros3ne the file.
+3. Run `bun run pack game-title`, and send Rolarie the file.
 
 `bun run make game-title` does the commands of steps 2 and 3 in one: the game's books made,
 its client built, the checks run and the game packed, stopping at the first that fails.
@@ -102,7 +102,7 @@ What you sent is reviewed as it was built: your books by what they come to, your
 and your game, played. A site never runs your maths, and never builds or runs your
 client's code.
 
-Keros3ne takes this repository's own game in under a studio it keeps hidden: its tests
+Rolarie takes this repository's own game in under a studio it keeps hidden: its tests
 play Game Title, and players are not shown it.
 
 MIT licensed: see `LICENSE`.
