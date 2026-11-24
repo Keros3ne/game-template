@@ -93,6 +93,10 @@ you can open it and see exactly what you are sending.
    `bun run test:browser`. Commit, with `books/books.json` and `client/client.json`.
 3. Run `bun run pack game-title`, and send Keros3ne the file.
 
+`bun run make game-title` does the commands of steps 2 and 3 in one: the game's books made,
+its client built, the checks run and the game packed, stopping at the first that fails.
+Your tests and the commit are still yours.
+
 Each game is sent by itself, at its own version, however many games a repository holds.
 What you sent is reviewed as it was built: your books by what they come to, your guide,
 and your game, played. A site never runs your maths, and never builds or runs your
